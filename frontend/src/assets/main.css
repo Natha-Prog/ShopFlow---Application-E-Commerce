@@ -1,0 +1,128 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@theme {
+  --color-gold: #d4af37;
+  --color-gold-light: #f5d76e;
+  --color-gold-dark: #8b6914;
+  --color-gold-pale: #fdf6e3;
+  --color-brand: #0a0a0a;
+}
+
+:root {
+  --color-primary: #eab308;
+  --color-primary-light: #facc15;
+  --color-primary-dark: #ca8a04;
+  --color-secondary: #854d0e;
+  --color-success: #16a34a;
+  --color-warning: #d97706;
+  --color-danger: #dc2626;
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+  --radius: 0.5rem;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background-color: #fafafa;
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-yellow-600 to-amber-500 text-black font-semibold rounded-lg hover:from-yellow-500 hover:to-amber-400 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed min-h-[44px] shadow-md hover:shadow-lg;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center px-6 py-3 bg-white text-gray-800 font-medium rounded-lg border-2 border-gray-200 hover:border-yellow-500 hover:bg-yellow-50 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2 transition-all duration-200 min-h-[44px];
+}
+
+.btn-danger {
+  @apply inline-flex items-center justify-center px-6 py-3 bg-red-600 text-white font-medium rounded-lg hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 transition-all duration-200 min-h-[44px];
+}
+
+.input-field {
+  @apply w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-all duration-200 bg-white;
+}
+
+.card {
+  @apply bg-white rounded-xl shadow-md p-6 border border-gray-100 hover:shadow-lg transition-shadow duration-200;
+}
+
+.card-hover {
+  @apply bg-white rounded-xl shadow-md p-6 border border-gray-100 hover:shadow-xl hover:border-yellow-200 transition-all duration-200 cursor-pointer;
+}
+
+.badge {
+  @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold;
+}
+
+.badge-pending { @apply bg-yellow-100 text-yellow-800; }
+.badge-processing { @apply bg-amber-100 text-amber-800; }
+.badge-shipped { @apply bg-yellow-100 text-yellow-900; }
+.badge-delivered { @apply bg-green-100 text-green-800; }
+.badge-cancelled { @apply bg-red-100 text-red-800; }
+
+@keyframes slide-in {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+.toast-enter {
+  animation: slide-in 0.3s ease-out;
+}
+
+@keyframes pulse-skeleton {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.skeleton {
+  @apply bg-gray-200 rounded;
+  animation: pulse-skeleton 1.5s ease-in-out infinite;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d4af37;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b8960c;
+}
+
+/* Admin dashboard */
+.admin-panel {
+  @apply bg-white rounded-2xl border border-gray-100 shadow-sm;
+}
+
+.admin-stat-card {
+  @apply bg-white rounded-2xl border border-gray-100 shadow-sm p-5 hover:shadow-md transition-shadow duration-200;
+}
+
+.admin-panel-header {
+  @apply flex items-center justify-between px-6 py-4 border-b border-gray-100;
+}
+
+.admin-panel-title {
+  @apply text-base font-semibold text-gray-900;
+}
+
+.admin-nav-active {
+  @apply bg-yellow-500/10 text-gold-light border-l-2 border-gold;
+}
+
+.admin-nav-item {
+  @apply flex items-center gap-3 px-4 py-2.5 rounded-r-lg text-sm font-medium text-gray-400 hover:text-white hover:bg-white/5 transition-all duration-200 border-l-2 border-transparent;
+}

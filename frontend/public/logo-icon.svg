@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" role="img" aria-label="Golden-Shop">
+  <defs>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fde68a"/>
+      <stop offset="45%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <linearGradient id="gold-shine" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fff7ed" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#fbbf24" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="48" height="48" rx="12" fill="#d97706"/>
+  <g transform="translate(8, 8)">
+    <path d="M8 12V9.5a8 8 0 1 1 16 0V12" stroke="#fff7ed" stroke-width="2" stroke-linecap="round"/>
+    <path d="M4 12h24l-2.2 18H6.2L4 12z" fill="url(#gold)" stroke="#fff" stroke-width="1" stroke-linejoin="round"/>
+    <path d="M10 12h12l-1 10H11L10 12z" fill="url(#gold-shine)"/>
+    <path d="M14 4l1.2 2.4 2.6.4-1.9 1.8.4 2.6L14 9.8l-2.3 1.4.4-2.6-1.9-1.8 2.6-.4L14 4z" fill="#fff" opacity="0.95"/>
+  </g>
+</svg>

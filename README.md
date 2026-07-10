@@ -137,7 +137,7 @@ Créer une application e-commerce complète avec une séparation claire entre fr
 
 ## 👤 Auteur
 
-[Nom de l'auteur]
+Nata-Dev - Développeur Backend et Frontend
 
 ## 📄 Licence
 
